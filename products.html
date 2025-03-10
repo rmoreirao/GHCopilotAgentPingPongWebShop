@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Ping Pong Shop</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Ping Pong Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown">
+                <a href="#">Products</a>
+                <ul class="dropdown-content">
+                    <li><a href="products.html?cat=all">All Products</a></li>
+                    <li><a href="products.html?cat=rubbers">Rubbers</a></li>
+                    <li><a href="products.html?cat=blades">Blades</a></li>
+                    <li><a href="products.html?cat=shoes">Shoes</a></li>
+                    <li><a href="products.html?cat=balls">Balls</a></li>
+                    <li><a href="products.html?cat=rackets">Complete Rackets</a></li>
+                </ul>
+            </li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Products</h1>
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <select id="categoryFilter" style="display: none;">
+                <option value="all">All Categories</option>
+                <option value="rubbers">Rubbers</option>
+                <option value="blades">Blades</option>
+                <option value="shoes">Shoes</option>
+                <option value="balls">Balls</option>
+                <option value="rackets">Complete Rackets</option>
+            </select>
+        </div>
+        <div id="productsContainer" class="products-container">
+            <!-- Products will be injected here by script.js -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
