@@ -7,30 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
     <noscript>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
     </noscript>
 </head>
 <body>
     <header>
         <nav role="navigation" aria-label="Main navigation">
             <ul class="menu" role="menubar">
+                <li role="none">
+                    <a href="index.html" role="menuitem">
+                        <img src="assets/img/logo/logo.png" alt="Ping Pong Shop" class="site-logo">
+                    </a>
+                </li>
                 <li role="none"><a href="index.html" role="menuitem">Ping Pong Shop</a></li>
-                <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+                <li role="none"><a href="blog/index.html" role="menuitem">Blog</a></li>
                 <li class="dropdown" role="none">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Products</a>
+                    <a href="pages/products.html?cat=all" role="menuitem" aria-haspopup="true" aria-expanded="false">Products</a>
                     <ul class="dropdown-content" role="menu" aria-label="Product categories">
-                        <li role="none"><a href="products.html?cat=all" role="menuitem">All Products</a></li>
-                        <li role="none"><a href="products.html?cat=rubbers" role="menuitem">Rubbers</a></li>
-                        <li role="none"><a href="products.html?cat=blades" role="menuitem">Blades</a></li>
-                        <li role="none"><a href="products.html?cat=shoes" role="menuitem">Shoes</a></li>
-                        <li role="none"><a href="products.html?cat=balls" role="menuitem">Balls</a></li>
-                        <li role="none"><a href="products.html?cat=rackets" role="menuitem">Complete Rackets</a></li>
+                        <li role="none"><a href="pages/products.html?cat=all" role="menuitem">All Products</a></li>
+                        <li role="none"><a href="pages/products.html?cat=rubbers" role="menuitem">Rubbers</a></li>
+                        <li role="none"><a href="pages/products.html?cat=blades" role="menuitem">Blades</a></li>
+                        <li role="none"><a href="pages/products.html?cat=shoes" role="menuitem">Shoes</a></li>
+                        <li role="none"><a href="pages/products.html?cat=balls" role="menuitem">Balls</a></li>
+                        <li role="none"><a href="pages/products.html?cat=rackets" role="menuitem">Complete Rackets</a></li>
                     </ul>
                 </li>
-                <li role="none"><a href="cart.html" role="menuitem" aria-label="Shopping cart">Cart</a></li>
+                <li role="none"><a href="pages/cart.html" role="menuitem" aria-label="Shopping cart">Cart</a></li>
             </ul>
         </nav>
     </header>
@@ -41,6 +46,6 @@
             <p>Play Pong! Use the Up Arrow to move both paddles up and the Down Arrow to move both paddles down.</p>
         </section>
     </main>
-    <script src="script.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>

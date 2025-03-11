@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Different Kinds of Rubbers - Ping Pong Shop</title>
+    <title>Cart - Ping Pong Shop</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
     <nav>
         <ul class="menu">
-            <li><a href="index.html">Ping Pong Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li>
+                <a href="../index.html">
+                    <img src="../assets/img/logo/logo.png" alt="Ping Pong Shop" class="site-logo">
+                </a>
+            </li>
+            <li><a href="../index.html">Ping Pong Shop</a></li>
+            <li><a href="../blog/index.html">Blog</a></li>
             <li class="dropdown">
-                <a href="#">Products</a>
+                <a href="products.html?cat=all">Products</a>
                 <ul class="dropdown-content">
                     <li><a href="products.html?cat=all">All Products</a></li>
                     <li><a href="products.html?cat=rubbers">Rubbers</a></li>
@@ -27,9 +32,12 @@
         </ul>
     </nav>
     <main>
-        <h1>The Different Kinds of Rubbers</h1>
-        <p>An overview of the various types of rubbers used in table tennis.</p>
-        <p>Table tennis rubbers come in different types, each offering unique characteristics. Some of the common types include inverted, short pips, long pips, and anti-spin. Each type affects the ball's speed, spin, and control differently.</p>
+        <h1>Your Shopping Cart</h1>
+        <div id="cartContainer">
+            <!-- Cart items will be displayed here -->
+        </div>
+        <button id="checkoutButton">Checkout</button>
     </main>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

@@ -11,6 +11,13 @@ nav {
     color: #F8F9FA;
 }
 
+.site-logo {
+    height: 60px;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .menu {
     list-style: none;
     display: flex;
@@ -92,6 +99,15 @@ button {
     box-sizing: border-box;
     transition: transform 0.3s;
     text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    object-fit: contain;
 }
 
 .product-card button {
@@ -267,4 +283,48 @@ select {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* Blog Styles */
+article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+article h2 {
+    color: #0077B6;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+article p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.blog-list li {
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.blog-list h2 {
+    color: #0077B6;
+    margin-bottom: 0.5rem;
+}
+
+.blog-list h2 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.blog-list h2 a:hover {
+    color: #2D6A4F;
 }

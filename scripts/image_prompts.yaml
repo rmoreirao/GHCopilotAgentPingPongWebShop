@@ -1,0 +1,27 @@
+images:
+  # Website Logo
+  - name: logo
+    prompt: "Create a minimalist and professional logo design for 'Ping Pong Shop' featuring a stylized table tennis paddle and ball. The design should use the color #0077B6 (professional blue) as the primary color, with white (#F8F9FA) for contrast, and subtle accents in #2D6A4F (green). The paddle should be depicted in a clean, modern geometric style, positioned at a slight angle with a small ball nearby. The text 'PING PONG SHOP' should be in a modern sans-serif font, arranged either below or beside the icon. The overall design should convey reliability and professionalism while being easily recognizable at different sizes. The background should be transparent."
+
+  # Category Images
+  - name: category_rubbers
+    prompt: "Create a professional product photography style image of a high-end table tennis rubber sheet in dark blue (#0077B6) and black colors. The rubber should be displayed at a 45-degree angle showing its distinctive pimpled texture, with soft professional lighting highlighting the surface details. The background should be clean white (#F8F9FA), creating a professional and modern look. The image should convey premium quality and technical excellence."
+
+  - name: category_blades
+    prompt: "Create a professional product photography of a premium table tennis blade made of natural wood layers. The blade should be positioned to show its sophisticated wood grain pattern and layers, with the handle featuring professional craftsmanship. Use subtle lighting to highlight the natural wood tones against a clean white (#F8F9FA) background. Include small green (#2D6A4F) design elements to emphasize its professional quality."
+
+  - name: category_shoes
+    prompt: "Create a professional sports equipment photograph of a modern table tennis shoe. The shoe should be positioned at a dynamic three-quarter angle, highlighting its specialized design features for table tennis movements. Use a combination of blue (#0077B6) and white (#F8F9FA) in the shoe design with green (#2D6A4F) accents. The background should be light gray (#E5E5E5), creating a clean, professional presentation."
+
+  - name: category_balls
+    prompt: "Create a professional product photograph of competition-grade table tennis balls. Arrange three white balls in a triangular composition against a light gray (#E5E5E5) background. Use professional lighting to create subtle shadows and highlight the balls' perfect spherical shape. Include a small blue (#0077B6) official certification marking on one visible ball. The image should convey professional tournament quality."
+
+  - name: category_complete_rackets
+    prompt: "Create a professional product photograph of a premium complete table tennis racket. The racket should be positioned to show both the red and black rubber surfaces, with the wooden blade visible at the edges. The handle should feature professional design elements in blue (#0077B6) and green (#2D6A4F). Position the racket at a dynamic angle against a clean white (#F8F9FA) background with subtle shadows to create depth."
+
+  # Product Images (Sample set for each category)
+  - name: rubber_tensor_x1
+    prompt: "Create a product photograph of a professional table tennis rubber named 'Tensor X1'. Show the rubber sheet partially peeled back to reveal its sponge layer, with visible pimpled texture. Use professional lighting to highlight the deep blue (#0077B6) sponge material. Include a small brand marking and technical specifications text. White (#F8F9FA) background for clean presentation."
+
+  - name: blade_pro_carbon
+    prompt: "Create a product photograph of a professional table tennis blade named 'Pro Carbon'. The blade should show a combination of wood and carbon fiber layers, with visible technology markings. Position it to show the playing surface and handle construction. Use dramatic lighting to highlight the materials against a white (#F8F9FA) background with subtle green (#2D6A4F) design elements."
