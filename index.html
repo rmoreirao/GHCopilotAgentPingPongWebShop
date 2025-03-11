@@ -23,7 +23,6 @@
                     </a>
                 </li>
                 <li role="none"><a href="index.html" role="menuitem">Ping Pong Shop</a></li>
-                <li role="none"><a href="blog/index.html" role="menuitem">Blog</a></li>
                 <li class="dropdown" role="none">
                     <a href="pages/products.html?cat=all" role="menuitem" aria-haspopup="true" aria-expanded="false">Products</a>
                     <ul class="dropdown-content" role="menu" aria-label="Product categories">
@@ -35,17 +34,51 @@
                         <li role="none"><a href="pages/products.html?cat=rackets" role="menuitem">Complete Rackets</a></li>
                     </ul>
                 </li>
+                <li role="none"><a href="blog/index.html" role="menuitem">Blog</a></li>
+                <li role="none"><a href="pages/play.html" role="menuitem">Play Pong Game</a></li>
+                <li role="none"><a href="pages/contact.html" role="menuitem">Contact</a></li>
                 <li role="none"><a href="pages/cart.html" role="menuitem" aria-label="Shopping cart">Cart</a></li>
             </ul>
         </nav>
     </header>
     <main id="mainContent" role="main">
-        <h1>Welcome to Ping Pong Shop</h1>
-        <section id="pong-game-section" aria-label="Interactive Pong game">
-            <canvas id="pongCanvas" width="600" height="400" aria-label="Pong game" role="img"></canvas>
-            <p>Play Pong! Use the Up Arrow to move both paddles up and the Down Arrow to move both paddles down.</p>
+        <section class="hero-section">
+            <img src="assets/img/main/hero_image.png" alt="Professional table tennis player in action">
+            <div class="hero-content">
+                <h1>Your Ultimate Table Tennis Destination</h1>
+                <p>Discover professional-grade equipment for players of all levels</p>
+                <a href="pages/products.html?cat=all" class="cta-button">Shop Now</a>
+                <a href="pages/play.html" class="cta-button">Play Pong Game</a>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <h2>Why Choose Us</h2>
+            <div class="featured-grid">
+                <div class="feature-card">
+                    <i class="material-icons">verified</i>
+                    <h3>Professional Quality</h3>
+                    <p>Curated selection of top-tier table tennis equipment</p>
+                </div>
+                <div class="feature-card">
+                    <i class="material-icons">local_shipping</i>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and secure shipping worldwide</p>
+                </div>
+                <div class="feature-card">
+                    <i class="material-icons">support_agent</i>
+                    <h3>Expert Support</h3>
+                    <p>Professional advice to help you choose the right equipment</p>
+                </div>
+                <div class="feature-card">
+                    <i class="material-icons">sports_tennis</i>
+                    <h3>Play & Learn</h3>
+                    <p>Try our interactive Pong game and improve your skills</p>
+                </div>
+            </div>
         </section>
     </main>
-    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/products.js" type="module"></script>
+    <script src="assets/js/script.js" type="module" defer></script>
 </body>
 </html>

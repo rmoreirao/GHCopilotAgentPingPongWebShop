@@ -15,9 +15,9 @@ client = AzureOpenAI(
     api_key=os.environ["AZURE_OPENAI_API_KEY"],
 )
 
-def ensure_output_dir():
-    """Ensure the output_images directory exists"""
-    output_dir = os.path.join(os.path.dirname(__file__), 'output_images')
+def ensure_output_dir(path):
+    """Ensure the output directory exists for the given path"""
+    output_dir = os.path.join(os.path.dirname(__file__), 'output_images', os.path.dirname(path))
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     return output_dir
@@ -30,7 +30,7 @@ def download_image(url, output_path):
     with open(output_path, 'wb') as f:
         f.write(response.content)
 
-def generate_image(prompt, output_name):
+def generate_image(prompt, output_name, path):
     """Generate an image using DALL-E 3 and save it to the output folder"""
     result = client.images.generate(
         model="dall-e-3",
@@ -40,9 +40,9 @@ def generate_image(prompt, output_name):
     
     image_url = json.loads(result.model_dump_json())['data'][0]['url']
     
-    # Setup output path
-    output_dir = ensure_output_dir()
-    output_path = os.path.join(output_dir, f"{output_name}.png")
+    # Setup output path using the path from YAML
+    output_dir = ensure_output_dir(path)
+    output_path = os.path.join(output_dir, os.path.basename(path))
     
     # Download and save the image
     download_image(image_url, output_path)
@@ -60,7 +60,7 @@ def main():
     # Process each image prompt
     for image in data['images']:
         try:
-            generate_image(image['prompt'], image['name'])
+            generate_image(image['prompt'], image['name'], image['path'])
         except Exception as e:
             print(f"Error generating image {image['name']}: {str(e)}")
 

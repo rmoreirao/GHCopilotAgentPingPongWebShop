@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Ping Pong - Ping Pong Shop</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <nav>
+            <ul class="menu">
+                <li>
+                    <a href="../index.html">
+                        <img src="../assets/img/logo/logo.png" alt="Ping Pong Shop" class="site-logo">
+                    </a>
+                </li>
+                <li><a href="../index.html">Ping Pong Shop</a></li>
+                <li class="dropdown">
+                    <a href="products.html?cat=all">Products</a>
+                    <ul class="dropdown-content">
+                        <li><a href="products.html?cat=all">All Products</a></li>
+                        <li><a href="products.html?cat=rubbers">Rubbers</a></li>
+                        <li><a href="products.html?cat=blades">Blades</a></li>
+                        <li><a href="products.html?cat=shoes">Shoes</a></li>
+                        <li><a href="products.html?cat=balls">Balls</a></li>
+                        <li><a href="products.html?cat=rackets">Complete Rackets</a></li>
+                    </ul>
+                </li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="play.html">Play Pong Game</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+    </nav>
+    <main>
+        <h1>Play Ping Pong</h1>
+        <section id="pong-game-section" aria-label="Interactive Pong game">
+            <canvas id="pongCanvas" width="600" height="400" aria-label="Pong game" role="img"></canvas>
+            <p>Use the Up Arrow (↑) to move both paddles up and the Down Arrow (↓) to move both paddles down. Try to keep the ball in play!</p>
+        </section>
+    </main>
+    <script src="../assets/js/products.js" type="module"></script>
+    <script src="../assets/js/script.js" type="module"></script>
+</body>
+</html>

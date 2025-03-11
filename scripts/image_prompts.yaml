@@ -1,27 +1,98 @@
+# Website Images and Product Data
 images:
   # Website Logo
   - name: logo
+    path: logo/logo.png
     prompt: "Create a minimalist and professional logo design for 'Ping Pong Shop' featuring a stylized table tennis paddle and ball. The design should use the color #0077B6 (professional blue) as the primary color, with white (#F8F9FA) for contrast, and subtle accents in #2D6A4F (green). The paddle should be depicted in a clean, modern geometric style, positioned at a slight angle with a small ball nearby. The text 'PING PONG SHOP' should be in a modern sans-serif font, arranged either below or beside the icon. The overall design should convey reliability and professionalism while being easily recognizable at different sizes. The background should be transparent."
+
+  # Hero Image
+  - name: hero_image
+    path: main/hero_image.png
+    prompt: "Create a dynamic and professional photograph of a table tennis match in action. Show a player executing a powerful forehand shot with perfect form, captured at the moment of impact. The scene should be dramatically lit with professional sports lighting, creating a sense of intensity and motion. The player should be wearing professional attire in blue (#0077B6) and white (#F8F9FA). The background should show a slightly blurred modern sports facility with subtle green (#2D6A4F) accents. The composition should convey both the speed and precision of professional table tennis while maintaining a clean, premium aesthetic."
 
   # Category Images
   - name: category_rubbers
+    path: products/category_rubbers.png
     prompt: "Create a professional product photography style image of a high-end table tennis rubber sheet in dark blue (#0077B6) and black colors. The rubber should be displayed at a 45-degree angle showing its distinctive pimpled texture, with soft professional lighting highlighting the surface details. The background should be clean white (#F8F9FA), creating a professional and modern look. The image should convey premium quality and technical excellence."
 
   - name: category_blades
+    path: products/category_blades.png
     prompt: "Create a professional product photography of a premium table tennis blade made of natural wood layers. The blade should be positioned to show its sophisticated wood grain pattern and layers, with the handle featuring professional craftsmanship. Use subtle lighting to highlight the natural wood tones against a clean white (#F8F9FA) background. Include small green (#2D6A4F) design elements to emphasize its professional quality."
 
   - name: category_shoes
+    path: products/category_shoes.png
     prompt: "Create a professional sports equipment photograph of a modern table tennis shoe. The shoe should be positioned at a dynamic three-quarter angle, highlighting its specialized design features for table tennis movements. Use a combination of blue (#0077B6) and white (#F8F9FA) in the shoe design with green (#2D6A4F) accents. The background should be light gray (#E5E5E5), creating a clean, professional presentation."
 
   - name: category_balls
+    path: products/category_balls.png
     prompt: "Create a professional product photograph of competition-grade table tennis balls. Arrange three white balls in a triangular composition against a light gray (#E5E5E5) background. Use professional lighting to create subtle shadows and highlight the balls' perfect spherical shape. Include a small blue (#0077B6) official certification marking on one visible ball. The image should convey professional tournament quality."
 
   - name: category_complete_rackets
+    path: products/category_complete_rackets.png
     prompt: "Create a professional product photograph of a premium complete table tennis racket. The racket should be positioned to show both the red and black rubber surfaces, with the wooden blade visible at the edges. The handle should feature professional design elements in blue (#0077B6) and green (#2D6A4F). Position the racket at a dynamic angle against a clean white (#F8F9FA) background with subtle shadows to create depth."
 
   # Product Images (Sample set for each category)
   - name: rubber_tensor_x1
+    path: products/rubber_tensor_x1.png
     prompt: "Create a product photograph of a professional table tennis rubber named 'Tensor X1'. Show the rubber sheet partially peeled back to reveal its sponge layer, with visible pimpled texture. Use professional lighting to highlight the deep blue (#0077B6) sponge material. Include a small brand marking and technical specifications text. White (#F8F9FA) background for clean presentation."
 
   - name: blade_pro_carbon
+    path: products/blade_pro_carbon.png
     prompt: "Create a product photograph of a professional table tennis blade named 'Pro Carbon'. The blade should show a combination of wood and carbon fiber layers, with visible technology markings. Position it to show the playing surface and handle construction. Use dramatic lighting to highlight the materials against a white (#F8F9FA) background with subtle green (#2D6A4F) design elements."
+
+products:
+  - id: 1
+    name: Tensor X1
+    category: rubbers
+    price: 69.99
+    icon: sports_tennis
+    path: products/rubber_tensor_x1.png
+    details: Professional grade table tennis rubber with excellent spin and speed characteristics. Features advanced tensor technology for enhanced performance.
+
+  - id: 2
+    name: Pro Carbon
+    category: blades
+    price: 199.99
+    icon: dashboard
+    path: products/blade_pro_carbon.png
+    details: High-end carbon fiber blade offering exceptional power and control. Perfect for offensive players seeking maximum speed without compromising feel.
+
+  - id: 3
+    name: Premium Rubber Sheet
+    category: rubbers
+    price: 79.99
+    icon: sports_tennis
+    path: products/category_rubbers.png
+    details: Professional rubber sheet with balanced characteristics. Suitable for all-round players looking for consistent performance.
+
+  - id: 4
+    name: Professional Blade
+    category: blades
+    price: 189.99
+    icon: dashboard
+    path: products/category_blades.png
+    details: Tournament-grade wooden blade with premium construction. Offers excellent feel and control for competitive play.
+
+  - id: 5
+    name: Table Tennis Shoes
+    category: shoes
+    price: 89.99
+    icon: directions_walk
+    path: products/category_shoes.png
+    details: Professional table tennis footwear with superior grip and stability. Designed for quick movements and extended comfort during play.
+
+  - id: 6
+    name: Competition Balls
+    category: balls
+    price: 19.99
+    icon: circle
+    path: products/category_balls.png
+    details: ITTF-approved 3-star competition balls. Perfect roundness and consistent bounce for tournament play.
+
+  - id: 7
+    name: Complete Racket Pro
+    category: rackets
+    price: 129.99
+    icon: sports_tennis
+    path: products/category_complete_rackets.png
+    details: Pre-assembled professional racket with premium rubbers and blade. Ready to play, perfect for serious players seeking high performance.

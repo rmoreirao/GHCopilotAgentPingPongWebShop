@@ -1,15 +1,6 @@
 /* script.js - Contains logic for Pong game, product listing, search/filter, and cart management */
 
-// Product data
-const productsData = [
-    { id: 1, name: "Tensor X1", category: "rubbers", price: 69.99, icon: "sports_tennis", image: "../assets/img/products/rubber_tensor_x1.png" },
-    { id: 2, name: "Pro Carbon", category: "blades", price: 199.99, icon: "dashboard", image: "../assets/img/products/blade_pro_carbon.png" },
-    { id: 3, name: "Premium Rubber Sheet", category: "rubbers", price: 79.99, icon: "sports_tennis", image: "../assets/img/products/category_rubbers.png" },
-    { id: 4, name: "Professional Blade", category: "blades", price: 189.99, icon: "dashboard", image: "../assets/img/products/category_blades.png" },
-    { id: 5, name: "Table Tennis Shoes", category: "shoes", price: 89.99, icon: "directions_walk", image: "../assets/img/products/category_shoes.png" },
-    { id: 6, name: "Competition Balls", category: "balls", price: 19.99, icon: "circle", image: "../assets/img/products/category_balls.png" },
-    { id: 7, name: "Complete Racket Pro", category: "rackets", price: 129.99, icon: "sports_tennis", image: "../assets/img/products/category_complete_rackets.png" }
-];
+import { productsData } from './products.js';
 
 // Helper function to escape HTML (security measure)
 function escapeHtml(str) {
@@ -35,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(document.getElementById('cartContainer')) {
         initCartPage();
+    }
+
+    if(document.getElementById('contactForm')) {
+        initContactForm();
     }
 
     // Add keyboard navigation
@@ -224,7 +219,7 @@ function initProductsPage() {
                 }
                 <h3>${escapeHtml(product.name)}</h3>
                 <p>Price: $${escapeHtml(product.price.toString())}</p>
-                <button onclick="addToCart(${product.id})">Add to Cart</button>
+                <button data-product-id="${product.id}">Add to Cart</button>
             `;
             productsContainer.appendChild(card);
         });
@@ -270,6 +265,17 @@ function initProductsPage() {
             setLoading(productsContainer, false);
         }, 300);
     });
+
+    // Add event delegation for add to cart buttons
+    if(productsContainer) {
+        productsContainer.addEventListener('click', e => {
+            const button = e.target.closest('button[data-product-id]');
+            if (button) {
+                const productId = parseInt(button.dataset.productId);
+                addToCart(productId);
+            }
+        });
+    }
 }
 
 /* ------------------ Cart Management ------------------ */
@@ -320,6 +326,8 @@ function initCartPage() {
     let cart = getCart();
 
     function renderCart() {
+        if(!cartContainer) return;
+        
         cartContainer.innerHTML = '';
         if(cart.length === 0) {
             cartContainer.innerHTML = '<p>Your cart is empty.</p>';
@@ -327,18 +335,33 @@ function initCartPage() {
         }
         cart.forEach(item => {
             const itemDiv = document.createElement('div');
-            itemDiv.innerHTML = `<p>${escapeHtml(item.name)} - $${escapeHtml(item.price.toString())} x ${escapeHtml(item.quantity.toString())}</p>
-            <button onclick="removeFromCart(${item.id})">Remove</button>`;
+            itemDiv.innerHTML = `
+                <p>${escapeHtml(item.name)} - $${escapeHtml(item.price.toString())} x ${escapeHtml(item.quantity.toString())}</p>
+                <button data-product-id="${item.id}">Remove</button>
+            `;
             cartContainer.appendChild(itemDiv);
         });
     }
 
-    checkoutButton.addEventListener('click', function() {
-        alert('Payment processed (mocked). Thank you for your purchase!');
-        localStorage.removeItem('cart');
-        cart = [];
-        renderCart();
-    });
+    if(cartContainer) {
+        // Add event delegation for remove buttons
+        cartContainer.addEventListener('click', e => {
+            const button = e.target.closest('button[data-product-id]');
+            if (button) {
+                const productId = parseInt(button.dataset.productId);
+                removeFromCart(productId);
+            }
+        });
+    }
+
+    if(checkoutButton) {
+        checkoutButton.addEventListener('click', function() {
+            alert('Payment processed (mocked). Thank you for your purchase!');
+            localStorage.removeItem('cart');
+            cart = [];
+            renderCart();
+        });
+    }
 
     renderCart();
 }
@@ -350,4 +373,23 @@ function removeFromCart(productId) {
     saveCart(cart);
     initCartPage();
     alert('Item removed from cart.');
+}
+
+/* ------------------ Contact Form ------------------ */
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            
+            // Simulate form submission
+            setLoading(contactForm, true);
+            setTimeout(() => {
+                showFeedback('Thank you for your message. We will get back to you soon!', 'success');
+                contactForm.reset();
+                setLoading(contactForm, false);
+            }, 1000);
+        });
+    }
 }

@@ -1,4 +1,4 @@
 openai>=1.0.0
 python-dotenv
-PyYAML
+pyyaml
 requests
