@@ -53,16 +53,29 @@ def main():
     # Read the YAML file
     script_dir = os.path.dirname(__file__)
     yaml_path = os.path.join(script_dir, 'image_prompts.yaml')
-    
+    products_yaml_path = os.path.join(script_dir, 'products_list.yaml')
+
+    # Process image_prompts.yaml
     with open(yaml_path, 'r') as file:
         data = yaml.safe_load(file)
-    
-    # Process each image prompt
+
     for image in data['images']:
         try:
             generate_image(image['prompt'], image['name'], image['path'])
         except Exception as e:
             print(f"Error generating image {image['name']}: {str(e)}")
+
+    # Process products_list.yaml
+    with open(products_yaml_path, 'r') as file:
+        products_data = yaml.safe_load(file)
+
+    for product in products_data:
+        try:
+            # Generate image for each product
+            product_image_path = os.path.join('products', product['imageName'])
+            generate_image(product['imagePrompt'], product['productName'], product_image_path)
+        except Exception as e:
+            print(f"Error generating image for product {product['productName']}: {str(e)}")
 
 if __name__ == "__main__":
     main()

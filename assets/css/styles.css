@@ -222,6 +222,18 @@ select {
     font-weight: bold;
     animation: slidein 0.3s ease-in-out;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.feedback.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .feedback.success {
@@ -234,6 +246,27 @@ select {
 
 .feedback.info {
     background-color: #0077B6;
+}
+
+.feedback i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.feedback .message {
+    flex-grow: 1;
+}
+
+.feedback .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    margin-left: 10px;
+    min-height: auto;
+    min-width: auto;
 }
 
 @keyframes slidein {

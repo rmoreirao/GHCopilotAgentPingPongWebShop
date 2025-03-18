@@ -1,0 +1,224 @@
+- id: 1
+  productName: "Butterfly Tenergy 05"
+  productDescription: "The world's most popular high-performance rubber featuring Spring Sponge technology. Provides exceptional spin and speed with unmatched control for offensive players."
+  icon: "sports_tennis"
+  imagePrompt: "High-quality photorealistic image of Butterfly Tenergy 05 table tennis rubber with its distinctive red top sheet and black sponge visible from the side view, showing the Butterfly logo and packaging"
+  category: "rubbers"
+  price: 89.99
+  imageName: "tenergy_05.png"
+
+- id: 2
+  productName: "Butterfly Dignics 09C"
+  productDescription: "Premium rubber with Spring Sponge X technology and increased surface tension for maximum spin potential and explosive power on offensive strokes."
+  icon: "sports_tennis"
+  imagePrompt: "Realistic image of Butterfly Dignics 09C table tennis rubber showing its glossy black top sheet with Butterfly logo, partial side view revealing the orange sponge layer"
+  category: "rubbers"
+  price: 99.99
+  imageName: "dignics_09c.png"
+
+- id: 3
+  productName: "Butterfly Rozena"
+  productDescription: "All-round performance rubber with Spring Sponge technology offering excellent balance between speed, spin and control at an affordable price point."
+  icon: "sports_tennis"
+  imagePrompt: "Photorealistic image of Butterfly Rozena table tennis rubber showing its distinctive red surface with Butterfly branding and packaging, displaying the rubber's texture clearly"
+  category: "rubbers"
+  price: 59.99
+  imageName: "rozena.png"
+
+- id: 4
+  productName: "Butterfly Bryce Speed"
+  productDescription: "High-speed rubber designed for players who prioritize velocity over spin, featuring a harder sponge and tacky top sheet for direct attacking play."
+  icon: "sports_tennis"
+  imagePrompt: "Realistic product image of Butterfly Bryce Speed rubber showing the black rubber sheet with Butterfly logo, packaging, and partial view of the sponge layer"
+  category: "rubbers"
+  price: 64.99
+  imageName: "bryce_speed.png"
+
+- id: 5
+  productName: "Butterfly Sriver FX"
+  productDescription: "Classic rubber trusted by players worldwide for decades, offering consistent performance with good spin, speed and exceptional control."
+  icon: "sports_tennis"
+  imagePrompt: "Detailed realistic image of Butterfly Sriver FX rubber sheet with its traditional red color, showing the iconic pimpled texture and Butterfly branding on the rubber surface"
+  category: "rubbers"
+  price: 49.99
+  imageName: "sriver_fx.png"
+
+- id: 6
+  productName: "Butterfly Viscaria"
+  productDescription: "Legendary 5-ply wood with ALC (Arylate Carbon) layers offering perfect balance of speed, feel and vibration absorption. Used by many world champions."
+  icon: "dashboard"
+  imagePrompt: "Photorealistic image of Butterfly Viscaria blade showing its distinctive red handle with Butterfly logo, dark wood playing surface with visible ALC fiber layers along the edge"
+  category: "blades"
+  price: 249.99
+  imageName: "viscaria.png"
+
+- id: 7
+  productName: "Butterfly Timo Boll ALC"
+  productDescription: "Professional 5+2 ply blade with Arylate Carbon layers designed with input from German superstar Timo Boll, offering excellent control with adequate speed."
+  icon: "dashboard"
+  imagePrompt: "Realistic product shot of Butterfly Timo Boll ALC blade showing its natural wood face, Timo Boll signature, black edges with visible carbon fiber layers, and Butterfly branded handle"
+  category: "blades"
+  price: 219.99
+  imageName: "timo_boll_alc.png"
+
+- id: 8
+  productName: "Butterfly Zhang Jike Super ZLC"
+  productDescription: "High-end 5+2 ply blade featuring ZL Carbon for extraordinary power and feeling, designed with Olympic champion Zhang Jike."
+  icon: "dashboard"
+  imagePrompt: "Detailed realistic image of Butterfly Zhang Jike Super ZLC blade displaying its natural wood finish, Zhang Jike signature, ZL Carbon fiber visible in edge layers, and flared handle with Butterfly branding"
+  category: "blades"
+  price: 289.99
+  imageName: "zhang_jike_super_zlc.png"
+
+- id: 9
+  productName: "Butterfly Cypress S"
+  productDescription: "All-wood 5-ply blade crafted from premium materials offering exceptional feel and control for players who prefer pure wood characteristics."
+  icon: "dashboard"
+  imagePrompt: "Photorealistic image of Butterfly Cypress S blade showing its light-colored natural wood surface, clean edge without composite materials, and straight handle with Butterfly logo"
+  category: "blades"
+  price: 119.99
+  imageName: "cypress_s.png"
+
+- id: 10
+  productName: "Butterfly Innerforce Layer ZLC"
+  productDescription: "7-ply blade with ZL Carbon positioned deeper within the blade for balanced offensive play with excellent feedback and consistency."
+  icon: "dashboard"
+  imagePrompt: "Realistic product image of Butterfly Innerforce Layer ZLC blade showing its medium-dark wood tone, subtle ZLC fiber layers visible in the edge, and anatomic handle with Butterfly branding"
+  category: "blades"
+  price: 259.99
+  imageName: "innerforce_layer_zlc.png"
+
+- id: 11
+  productName: "Butterfly Atamy Shirt"
+  productDescription: "Tournament-grade table tennis shirt featuring moisture-wicking fabric and ergonomic design for maximum comfort and performance during intense gameplay."
+  icon: "checkroom"
+  imagePrompt: "Photorealistic image of Butterfly Atamy shirt in blue color with contrast white side panels, Butterfly logo on chest, made from performance fabric with subtle textured pattern"
+  category: "clothing"
+  price: 59.99
+  imageName: "atamy_shirt.png"
+
+- id: 12
+  productName: "Butterfly Mito Tracksuit"
+  productDescription: "Professional tracksuit worn by world-class athletes, featuring breathable material, adjustable components and stylish Butterfly branding."
+  icon: "checkroom"
+  imagePrompt: "Realistic product image of complete Butterfly Mito tracksuit in navy blue with white accents, showing jacket with full zipper and matching pants, both with Butterfly logos"
+  category: "clothing"
+  price: 129.99
+  imageName: "mito_tracksuit.png"
+
+- id: 13
+  productName: "Butterfly Melowa Shorts"
+  productDescription: "Lightweight competition shorts with elastic waistband and side pockets, designed for unrestricted movement during play."
+  icon: "checkroom"
+  imagePrompt: "Detailed realistic image of Butterfly Melowa shorts in black color with small Butterfly logo, showing the elastic waistband and lightweight performance fabric texture"
+  category: "clothing"
+  price: 39.99
+  imageName: "melowa_shorts.png"
+
+- id: 14
+  productName: "Butterfly Amaranth Polo"
+  productDescription: "Classic polo shirt with modern performance fabrics, suitable for both competition and casual wear with elegant Butterfly styling."
+  icon: "checkroom"
+  imagePrompt: "Photorealistic image of Butterfly Amaranth polo shirt in red color with contrasting collar, button placket, and small Butterfly logo embroidered on chest"
+  category: "clothing"
+  price: 49.99
+  imageName: "amaranth_polo.png"
+
+- id: 15
+  productName: "Butterfly Laurett Shirt"
+  productDescription: "Women's competition shirt with tailored fit, featuring advanced moisture management and stylish design for tournament play."
+  icon: "checkroom"
+  imagePrompt: "Realistic product image of women's Butterfly Laurett shirt in light blue with feminine cut, soft performance fabric, and Butterfly logo prominently displayed"
+  category: "clothing"
+  price: 54.99
+  imageName: "laurett_shirt.png"
+
+- id: 16
+  productName: "Butterfly Lezoline Rifones"
+  productDescription: "Professional table tennis shoes with exceptional grip and stability, featuring lightweight construction and shock absorption for quick lateral movements."
+  icon: "directions_walk"
+  imagePrompt: "Photorealistic image of Butterfly Lezoline Rifones table tennis shoes in blue and white colorway, showing the distinctive sole pattern, mesh upper material, and Butterfly logo on sides"
+  category: "shoes"
+  price: 129.99
+  imageName: "lezoline_rifones.png"
+
+- id: 17
+  productName: "Butterfly Lezoline Mach"
+  productDescription: "Tournament-grade footwear with specialized rubber soles designed for maximum grip on indoor courts while providing superior comfort during extended play."
+  icon: "directions_walk"
+  imagePrompt: "Detailed realistic side view of Butterfly Lezoline Mach table tennis shoes in red and black color scheme with distinct white butterfly logo, showing the specialized grip pattern on the sole"
+  category: "shoes"
+  price: 119.99
+  imageName: "lezoline_mach.png"
+
+- id: 18
+  productName: "Butterfly Lezoline Groovy"
+  productDescription: "Mid-range table tennis shoes combining affordability with professional features including non-marking soles and breathable upper materials."
+  icon: "directions_walk"
+  imagePrompt: "Realistic product image of Butterfly Lezoline Groovy shoes in white with green accents, displaying the breathable mesh panels, supportive midsole, and Butterfly branding"
+  category: "shoes"
+  price: 89.99
+  imageName: "lezoline_groovy.png"
+
+- id: 19
+  productName: "Butterfly Lezoline Gigu"
+  productDescription: "Lightweight performance shoes designed with input from professional players, featuring responsive cushioning and exceptional stability for aggressive movement."
+  icon: "directions_walk"
+  imagePrompt: "Photorealistic image of Butterfly Lezoline Gigu table tennis shoes in black with red highlights, showing the slim profile, specialized court grip sole, and Butterfly logo placement"
+  category: "shoes"
+  price: 109.99
+  imageName: "lezoline_gigu.png"
+
+- id: 20
+  productName: "Butterfly Lezoline SAL"
+  productDescription: "Entry-level professional shoes with durable construction and excellent court grip, perfect for club players seeking reliability and comfort."
+  icon: "directions_walk"
+  imagePrompt: "Realistic product shot of Butterfly Lezoline SAL table tennis shoes in navy blue color with white sole, showing the supportive ankle design and Butterfly branding on the side"
+  category: "shoes"
+  price: 79.99
+  imageName: "lezoline_sal.png"
+
+- id: 21
+  productName: "Butterfly G40+ 3-Star Balls"
+  productDescription: "Official competition balls meeting ITTF standards, featuring perfectly balanced seam and consistent bounce for tournament play. Box of 12 balls."
+  icon: "circle"
+  imagePrompt: "Photorealistic image of Butterfly G40+ 3-Star white table tennis balls with box packaging, showing the Butterfly logo and 3-star rating on both balls and packaging"
+  category: "equipment"
+  price: 29.99
+  imageName: "g40_plus_3_star_balls.png"
+
+- id: 22
+  productName: "Butterfly Centrefold 25 Table"
+  productDescription: "ITTF-approved competition table featuring 25mm playing surface, sturdy undercarriage, and easy folding mechanism for storage and transportation."
+  icon: "table_bar"
+  imagePrompt: "Detailed realistic image of Butterfly Centrefold 25 professional table tennis table with blue playing surface, white lines, strong folding mechanism, and Butterfly logo on sides"
+  category: "equipment"
+  price: 1999.99
+  imageName: "centrefold_25_table.png"
+
+- id: 23
+  productName: "Butterfly Europa Net Set"
+  productDescription: "Professional net and post set used in major competitions, featuring precise tension adjustment and secure clamping mechanism."
+  icon: "fence"
+  imagePrompt: "Realistic product image of Butterfly Europa net set showing the cotton-blend black net, sturdy metal posts with tension adjustment mechanism, and Butterfly branding on clamps"
+  category: "equipment"
+  price: 89.99
+  imageName: "europa_net_set.png"
+
+- id: 24
+  productName: "Butterfly Liner II Bag"
+  productDescription: "Spacious equipment bag with dedicated compartments for rackets, balls, shoes and clothing. Features durable construction and comfortable carrying straps."
+  icon: "backpack"
+  imagePrompt: "Photorealistic image of Butterfly Liner II sports bag in blue and black colors with Butterfly logo, showing multiple compartments, racket storage section, and carrying straps"
+  category: "equipment"
+  price: 69.99
+  imageName: "liner_ii_bag.png"
+
+- id: 25
+  productName: "Butterfly Match Case"
+  productDescription: "Protective case for storing and transporting up to two complete rackets, featuring hard shell construction and plush interior lining."
+  icon: "work_outline"
+  imagePrompt: "Detailed realistic image of Butterfly Match Case in black with orange trim, showing the hard protective shell, zipper closure, and Butterfly logo embossed on the surface"
+  category: "equipment"
+  price: 34.99
+  imageName: "match_case.png"
