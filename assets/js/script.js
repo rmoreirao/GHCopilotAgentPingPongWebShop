@@ -188,11 +188,6 @@ function initPongGame() {
         centerLine: '#CCCCCC'
     };
     
-    // Sound effects
-    const paddleHitSound = new Audio('data:audio/wav;base64,UklGRh4BAABXQVZFZM9STQEAAAABAAEAR0RTOQAAAAABAGQ4AAAA67e67e67+/vd3d3e3+7u7u7u7v+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==');
-    const wallHitSound = new Audio('data:audio/wav;base64,UklGRhQBAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YfAAAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgA==');
-    const scoreSound = new Audio('data:audio/wav;base64,UklGRjIBAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQ4BAACAgICAgICAgICAgICAgICAgICAgAAAQECAgICAgIAAgIAAgICAgICAgIAAgIBVVVVVVVVVQFVVVUBVQFVVQEBAQEBAQEAAAAAAAAAAAEBAQEBAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUBVVVVAVVVVQFVVVUBVVVVAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQEBAQEBAQEBAQFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQFVVVUBAQEBAQEBAQEBAQEBAQEBAQAAAAAAAAABAQEBAQA==');
-    
     // Add key listeners for paddle movement
     document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowUp') upPressed = true;
@@ -295,7 +290,6 @@ function initPongGame() {
             
             // Position the ball correctly to avoid sticking
             ballX = 10 + paddleWidth;
-            paddleHitSound.play().catch(e => console.log("Audio play error:", e));
         }
         
         // Right paddle collision
@@ -317,7 +311,6 @@ function initPongGame() {
             
             // Position the ball correctly to avoid sticking
             ballX = canvas.width - paddleWidth - 10 - ballSize;
-            paddleHitSound.play().catch(e => console.log("Audio play error:", e));
         }
     }
     
@@ -334,13 +327,11 @@ function initPongGame() {
         // Top and bottom wall collision
         if (ballY <= 0 || ballY + ballSize >= canvas.height) {
             ballSpeedY = -ballSpeedY;
-            wallHitSound.play().catch(e => console.log("Audio play error:", e));
         }
         
         // Left wall collision (Player 2 scores)
         if (ballX < 0) {
             scorePlayer2++;
-            scoreSound.play().catch(e => console.log("Audio play error:", e));
             resetBall();
             
             if (scorePlayer2 >= winningScore) {
@@ -352,7 +343,6 @@ function initPongGame() {
         // Right wall collision (Player 1 scores)
         if (ballX + ballSize > canvas.width) {
             scorePlayer1++;
-            scoreSound.play().catch(e => console.log("Audio play error:", e));
             resetBall();
             
             if (scorePlayer1 >= winningScore) {
