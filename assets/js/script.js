@@ -744,14 +744,35 @@ function initContactForm() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(contactForm);
-            
-            // Simulate form submission
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
             setLoading(contactForm, true);
-            setTimeout(() => {
+            fetch('https://api.pingpongshop.com/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/pingpong'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(() => {
                 showFeedback('Thank you for your message. We will get back to you soon!', 'success');
                 contactForm.reset();
+            })
+            .catch(() => {
+                showFeedback('Failed to send message. Please try again later.', 'error');
+            })
+            .finally(() => {
                 setLoading(contactForm, false);
-            }, 1000);
+            });
         });
     }
 }
