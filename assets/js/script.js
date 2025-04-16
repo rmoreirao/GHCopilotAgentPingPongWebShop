@@ -755,7 +755,7 @@ function initContactForm() {
             fetch('https://api.pingpongshop.com/contact', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/pingpong'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(data)
             })
