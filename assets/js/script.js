@@ -741,39 +741,17 @@ function removeFromCart(productId) {
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                subject: formData.get('subject'),
-                message: formData.get('message')
-            };
-
+            
+            // Simulate form submission
             setLoading(contactForm, true);
-            try {
-                const response = await fetch('https://api.pingpongshop.com/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/pingpong'
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    showFeedback('Thank you for your message. We will get back to you soon!', 'success');
-                    contactForm.reset();
-                } else {
-                    showFeedback('Failed to send your message. Please try again later.', 'error');
-                }
-            } catch (error) {
-                showFeedback('An error occurred. Please try again later.', 'error');
-                console.error('Error:', error);
-            } finally {
+            setTimeout(() => {
+                showFeedback('Thank you for your message. We will get back to you soon!', 'success');
+                contactForm.reset();
                 setLoading(contactForm, false);
-            }
+            }, 1000);
         });
     }
 }
