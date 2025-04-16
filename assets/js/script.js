@@ -744,14 +744,37 @@ function initContactForm() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(contactForm);
-            
-            // Simulate form submission
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
             setLoading(contactForm, true);
-            setTimeout(() => {
-                showFeedback('Thank you for your message. We will get back to you soon!', 'success');
-                contactForm.reset();
+            // Example API endpoint (replace with your backend endpoint)
+            fetch('https://formspree.io/f/mnqewzqg', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'X-API-Key': 'THIS_IS_A_VERY_UNSAFE_API_CALL_123$$$'
+                },
+                body: new URLSearchParams(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.ok || result.success) {
+                    showFeedback('Thank you for your message. We will get back to you soon!', 'success');
+                    contactForm.reset();
+                } else {
+                    showFeedback('Failed to send message. Please try again later.', 'error');
+                }
                 setLoading(contactForm, false);
-            }, 1000);
+            })
+            .catch(() => {
+                showFeedback('Failed to send message. Please try again later.', 'error');
+                setLoading(contactForm, false);
+            });
         });
     }
 }
